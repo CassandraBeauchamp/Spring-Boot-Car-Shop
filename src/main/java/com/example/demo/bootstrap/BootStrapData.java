@@ -1,5 +1,6 @@
 package com.example.demo.bootstrap;
 
+import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
@@ -39,33 +40,65 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-       /*
+        long partCount = outsourcedPartRepository.count() + partRepository.count();
+        if(partCount == 0){
         OutsourcedPart o= new OutsourcedPart();
         o.setCompanyName("Western Governors University");
-        o.setName("out test");
+        o.setName("Engine");
         o.setInv(5);
-        o.setPrice(20.0);
+        o.setPrice(500.0);
         o.setId(100L);
         outsourcedPartRepository.save(o);
         OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
-        }
 
-        System.out.println(thePart.getCompanyName());
-        */
+        InhousePart u = new InhousePart();
+        u.setName("Set of 4 Wheels");
+        u.setInv(15);
+        u.setPrice(400.0);
+        u.setId(10L);
+        partRepository.save(u);
+
+        OutsourcedPart i= new OutsourcedPart();
+        i.setCompanyName("Western Governors University");
+        i.setName("Windshield");
+        i.setInv(10);
+        i.setPrice(200.0);
+        i.setId(1L);
+        outsourcedPartRepository.save(i);
+
+        InhousePart h = new InhousePart();
+        h.setName("Muffler");
+        h.setInv(20);
+        h.setPrice(100.0);
+        h.setId(11L);
+        partRepository.save(h);
+
+        InhousePart m = new InhousePart();
+        m.setName("Roof");
+        m.setInv(25);
+        m.setPrice(600.0);
+        m.setId(12L);
+        partRepository.save(m);
+ }
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
         for(OutsourcedPart part:outsourcedParts){
             System.out.println(part.getName()+" "+part.getCompanyName());
         }
+        long productCount = productRepository.count();
+        if(productCount == 0){
+        Product convertible= new Product("Convertible",30000.0,15);
+        Product truck= new Product("Truck",15000.0,15);
+        Product sedan= new Product("Sedan",10000.0,15);
+        Product suv= new Product("Suv",20000.0,15);
+        Product sportsCar= new Product("Sports Car",35000.0,15);
 
-        /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
-        */
+        productRepository.save(convertible);
+        productRepository.save(truck);
+        productRepository.save(sedan);
+        productRepository.save(suv);
+        productRepository.save(sportsCar);
+
+          }
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());
