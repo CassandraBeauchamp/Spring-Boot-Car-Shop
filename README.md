@@ -82,6 +82,24 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
+## Added logic to EnufPartsValidator.java to check if there is enough parts for the product lines 37-39
+## Added more descriptive error message to ValidEnufParts.java at line 20
+## Deleted files OutsourcedPartFormError.html and InhousePartFormError.html as no longer needed
+## Added text to display errors in user input on InhousePartForm.html on lines 30-35
+## Added text to display errors in user input on OutsourcedPartForm.html on lines 32-37
+## Created new Files InventoryValidator.java, MaxInventoryValidator.java, MaxValidInventory.java, and Valid Inventory.java in src/main/java/com/example/demo/validators
+## Added code to check if part is above minInv in InventoryValidator.java
+## Added descriptive message and interface in ValidInventory.java to describe if inventory is below minimum inventory
+## Added code to check if part is above maxInv in MaxInventoryValidator.java
+## Added descriptive message and interface in MaxValidInventory.java to describe if inventory is above maximum inventory
+## Added new validators, ValidInventory and MaxValidInventory to Part.java at line 21-22
+## Got rid of calls to checkInventory() in AddOutsourcedPartController.java and AddInhousePartController.java, error checking replaced by new validators
+
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+## Added test Method setMaxInv() to PartTest.java at lines 104-111
+## Added test Method getMaxInv() to PartTest.java at lines 112-119
+## Added test Method setMinInv() to PartTest.java at lines 120-127
+## Added test Method getMinInv() to PartTest.java at lines 128-135
 
 J.  Remove the class files for any unused validators in order to clean your code.
+## Deleted DeletePartValidator.java in src/main/java/com/example/demo/validators due to it being unused
