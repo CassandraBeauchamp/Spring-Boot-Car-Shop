@@ -109,6 +109,14 @@ public abstract class Part implements Serializable {
     public String toString(){
         return this.name;
     }
+
+    public boolean checkInventory() {
+        if(inv > minInv && inv < maxInv)
+            return true;
+        else
+            return false;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
