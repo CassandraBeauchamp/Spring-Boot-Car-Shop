@@ -67,7 +67,14 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 ## Added getters and setters for maxInv and minInv in Part.java at lines 65-68
 ## Added maxInv and minInv amounts to the fields in the parts in BootStrapData.java at lines 43-91
 ## Added Max Inventory and Min Inventory headers to table on mainscreen.html at lines 40-41
+## Added Max Inventory and Min Inventory fields to InhousePartForm.html at lines 23-26
+## Added Max Inventory and Min Inventory fields to OutsourcedPartForm.html at lines 24-28
 ## Added maxInv and minInv values from the part to the the table on mainscreen.html at lines 50-51
+## Add checkInventory() method to Part.java at lines 112 to 119. This method checks to see if inventory value is within minInv and maxInv to see if it is a valid amount
+## Added call to checkInventory() in AddInhousePartController.java at lines 49-53 to ensure inventory value is within acceptable values.
+## Created file InhousePartFormError.html as copy of InhousePartForm.html, but with added text to display error when inventory is not between minInv and maxInv
+## Added call to checkInventory() in AddOutsorcedPartController.java at lines 50-54 to ensure inventory value is within acceptable values.
+## Created file OutsourcedPartFormError.html as copy of OutsourcedPartForm.html, but with added text to display error when inventory is not between minInv and maxInv
 
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
