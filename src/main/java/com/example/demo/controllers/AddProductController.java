@@ -81,7 +81,7 @@ public class AddProductController {
                 }
             }
             else{
-                product.setInv(0);
+               // product.setInv(0);
             }
             repo.save(product);
             return "confirmationaddproduct";
