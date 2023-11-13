@@ -103,3 +103,7 @@ I.  Add at least two unit tests for the maximum and minimum fields to the PartTe
 
 J.  Remove the class files for any unused validators in order to clean your code.
 ## Deleted DeletePartValidator.java in src/main/java/com/example/demo/validators due to it being unused
+
+Some small bug fixes:
+## Commented out line 84 in AddProductController.java as it was causing a bug with adding products
+## Fixed logic on line 37 of EnufPartsValidator.java
