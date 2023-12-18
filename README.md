@@ -4,7 +4,7 @@ Project: Spring Boot Car Shop
 
 Project Description: For a Java class, take a bear bones bicycle shop web app and turn it into a car shop and add the needed functionalities
 
-Important Notes: I was give the bear bones for this project, to see my contributions read below or view the commit history, all my code is in working_branch. Main branch was the code given to me
+Important Notes: I was give the bear bones for this project, to see my contributions read below or view the commit history
 
 
 + Changed line 14 in mainscreen.html, changed from "My Bicycle Shop" to "My Car Shop"
